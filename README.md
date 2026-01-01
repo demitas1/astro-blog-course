@@ -38,6 +38,17 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
+## 🎨 Prettier
+
+コードフォーマットには Prettier を使用しています。`scripts/prettier.sh` で操作できます。
+
+| Command                              | Action                                           |
+| :----------------------------------- | :----------------------------------------------- |
+| `./scripts/prettier.sh`              | フォーマットが必要なファイルの差分を表示         |
+| `./scripts/prettier.sh --list`       | フォーマットが必要なファイル一覧を表示           |
+| `./scripts/prettier.sh --write`      | 全ファイルをフォーマット                         |
+| `./scripts/prettier.sh --write file` | 指定ファイルをフォーマット                       |
+
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

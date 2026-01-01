@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 
 const pageTitle = "About";
 
@@ -22,14 +24,13 @@ const categories = [
     <title>{pageTitle}</title>
   </head>
   <body>
-    <a href="/">Home</a>
-    <a href="/blog">Blog</a>
-    <a href="/about">About</a>
+    <Navigation />
     <h1>{pageTitle}: このブログについて</h1>
     <p>このブログは練習用です。</p>
 
     <ul>
       {categories.map((category) => <li>{category}</li>)}
     </ul>
+    <Footer />
   </body>
 </html>
