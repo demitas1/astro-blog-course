@@ -1,8 +1,18 @@
 ---
-const username = "DEMI";
+import Social from "./Social.astro";
 
 ---
 
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+
 <footer>
-  このブログは{username}によって書かれたものです
+  <Social platform="github" username="demitas1"/>
+  <Social platform="github" username="demitas1"/>
+  <Social platform="github" username="demitas1"/>
 </footer>
