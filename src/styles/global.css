@@ -50,6 +50,19 @@
   }
 }
 
+.hamburger {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  background-color: #ff9776;
+  margin-bottom: 10px;
+}
+
 .nav-links {
   width: 100%;
   top: 5rem;
@@ -73,6 +86,10 @@
   background-color: #ff9776;
 }
 
+.expanded {
+  display: block;
+}
+
 @media screen and (min-width: 636px) {
   .nav-links {
     margin-left: 5em;
@@ -81,8 +98,13 @@
     width: auto;
     background: none;
   }
+
   .nav-links a {
     display: inline-block;
     padding: 15px 20px;
+  }
+
+  .hamburger {
+    display: none;
   }
 }
