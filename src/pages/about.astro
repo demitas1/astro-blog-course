@@ -1,8 +1,5 @@
 ---
-import "../styles/global.css";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-
+import BaseLayout from "../layouts/BaseLayout.astro"
 const pageTitle = "About";
 
 const categories = [
@@ -15,25 +12,11 @@ const categories = [
 ];
 ---
 
-<html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <Header />
-    <h1>{pageTitle}: このブログについて</h1>
-    <p>このブログは練習用です。</p>
+<BaseLayout pageTitle={pageTitle}>
+  <h1>{pageTitle}: このブログについて</h1>
+  <p>このブログは練習用です。</p>
 
-    <ul>
-      {categories.map((category) => <li>{category}</li>)}
-    </ul>
-    <Footer />
-<script>
-  import "../scripts/menu.js";
-</script>
-  </body>
-</html>
+  <ul>
+    {categories.map((category) => <li>{category}</li>)}
+  </ul>
+</BaseLayout>
