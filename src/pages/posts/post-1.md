@@ -1,3 +1,15 @@
+---
+layout: ../../layouts/MarkDownPostLayout.astro
+title: "マークダウンのサンプル"
+pubDate: 2026-01-01
+description: "この記事ではマークダウンの基本的な記法を紹介します"
+author: "DEMI"
+image:
+    url: "https://docs.astro.build/assets/full-logo-light.png"
+    alt: "Astro logo"
+tags: ["astro", "blog"]
+---
+
 # マークダウン記法サンプル
 
 この記事ではマークダウンの基本的な記法を紹介します。
