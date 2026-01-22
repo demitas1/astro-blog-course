@@ -1,6 +1,5 @@
 ---
-layout: ../../layouts/MarkDownPostLayout.astro
-title: "マークダウンのサンプル3"
+title: "マークダウンのサンプル2"
 pubDate: 2026-01-01
 description: "この記事ではマークダウンによるサンプルを表示します"
 author: "DEMI"
@@ -10,7 +9,7 @@ image:
 tags: ["astro", "blog"]
 ---
 
-# マークダウンサンプル 3
+# マークダウンサンプル 2
 
 この記事はマークダウンによるサンプルです。
 
