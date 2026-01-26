@@ -10,14 +10,26 @@ const uniqueTags = [...new Set(allTags)]
   a {
     color: #00539f;
   }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .tag {
+    margin: 0.25em;
+    border: dotted 1px #a1a1a1;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    font-size: 1.15em;
+    background-color: #f8fcfd;
+  }
 </style>
 
 <BaseLayout pageTitle="Tag Index">
-  <ul>
+  <div class="tags">
     {uniqueTags.map((tag) => (
-      <li>
+      <div class="tag">
         <a href=`/tags/${tag}`> {tag} </a>
-      </li>
+      </div>
     ))}
-  </ul>
+  </div>
 </BaseLayout>
