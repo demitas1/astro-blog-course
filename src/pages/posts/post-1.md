@@ -7,7 +7,7 @@ author: "DEMI"
 image:
     url: "https://docs.astro.build/assets/full-logo-light.png"
     alt: "Astro logo"
-tags: ["astro", "blog"]
+tags: ["astro", "blog", "example"]
 ---
 
 # マークダウン記法サンプル
