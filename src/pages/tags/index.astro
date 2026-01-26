@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro"
+
+const allPosts = await Astro.glob("../posts/*.md")
+const allTags = allPosts.map((post) => post.frontmatter.tags).flat()
+const uniqueTags = [...new Set(allTags)]
+---
+
+<style>
+  a {
+    color: #00539f;
+  }
+</style>
+
+<BaseLayout pageTitle="Tag Index">
+  <ul>
+    {uniqueTags.map((tag) => (
+      <li>
+        <a href=`/tags/${tag}`> {tag} </a>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>
