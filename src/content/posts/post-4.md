@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkDownPostLayout.astro
 title: "マークダウンのサンプル4"
 pubDate: 2026-01-01
 description: "この記事ではマークダウンによるサンプルを表示します"

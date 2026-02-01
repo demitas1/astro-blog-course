@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkDownPostLayout.astro
 title: "マークダウンのサンプル"
 pubDate: 2026-01-01
 description: "この記事ではマークダウンの基本的な記法を紹介します"

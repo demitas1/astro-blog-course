@@ -1,8 +1,9 @@
 ---
+import { getCollection } from "astro:content"
 import BaseLayout from "../../layouts/BaseLayout.astro"
 
-const allPosts = await Astro.glob("../posts/*.md")
-const allTags = allPosts.map((post) => post.frontmatter.tags).flat()
+const allPosts = await getCollection("posts")
+const allTags = allPosts.map((post) => post.data.tags).flat()
 const uniqueTags = [...new Set(allTags)]
 ---
 
