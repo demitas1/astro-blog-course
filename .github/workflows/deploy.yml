@@ -28,9 +28,17 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Create Cloudflare Pages project (if not exists)
+        uses: cloudflare/wrangler-action@v3
+        continue-on-error: true
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages project create ${{ vars.CLOUDFLARE_PROJECT_NAME || 'astro-blog-tutorial' }} --production-branch=master
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=${{ vars.CLOUDFLARE_PROJECT_NAME || 'astro-blog-tutorial' }}
+          command: pages deploy dist --project-name=${{ vars.CLOUDFLARE_PROJECT_NAME || 'astro-blog-tutorial' }} --commit-dirty=true
